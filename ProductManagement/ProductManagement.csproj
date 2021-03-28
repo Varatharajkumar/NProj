@@ -75,6 +75,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="AddProductDetail.aspx" />
     <Content Include="Content\bootstrap-grid.css" />
     <Content Include="Content\bootstrap-grid.min.css" />
     <Content Include="Content\bootstrap-reboot.css" />
@@ -82,10 +83,10 @@
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\Style.css" />
+    <Content Include="DisplayUserDetails.aspx" />
     <Content Include="Global.asax" />
     <Content Include="LoginInfo.aspx" />
     <Content Include="management.jpg" />
-    <Content Include="Menu1.aspx" />
     <Content Include="ProductDetails.aspx" />
     <Content Include="Scripts\bootstrap.bundle.js" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />
@@ -188,6 +189,7 @@
     <Content Include="Scripts\umd\popper.js" />
     <Content Include="Scripts\umd\popper.min.js" />
     <Content Include="SideBarDetails.ascx" />
+    <Content Include="TopBarDetails.ascx" />
     <Content Include="Web.config" />
     <Content Include="Scripts\umd\popper.min.js.map" />
     <Content Include="Scripts\umd\popper.js.map" />
@@ -201,6 +203,21 @@
     <Content Include="Scripts\popper-utils.js.map" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AddProductDetail.aspx.cs">
+      <DependentUpon>AddProductDetail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AddProductDetail.aspx.designer.cs">
+      <DependentUpon>AddProductDetail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DDL.cs" />
+    <Compile Include="DisplayUserDetails.aspx.cs">
+      <DependentUpon>DisplayUserDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DisplayUserDetails.aspx.designer.cs">
+      <DependentUpon>DisplayUserDetails.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -210,13 +227,6 @@
     </Compile>
     <Compile Include="LoginInfo.aspx.designer.cs">
       <DependentUpon>LoginInfo.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Menu1.aspx.cs">
-      <DependentUpon>Menu1.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Menu1.aspx.designer.cs">
-      <DependentUpon>Menu1.aspx</DependentUpon>
     </Compile>
     <Compile Include="ProductDetails.aspx.cs">
       <DependentUpon>ProductDetails.aspx</DependentUpon>
@@ -233,6 +243,13 @@
     </Compile>
     <Compile Include="SideBarDetails.ascx.designer.cs">
       <DependentUpon>SideBarDetails.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="TopBarDetails.ascx.cs">
+      <DependentUpon>TopBarDetails.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TopBarDetails.ascx.designer.cs">
+      <DependentUpon>TopBarDetails.ascx</DependentUpon>
     </Compile>
     <Compile Include="Utility.cs" />
   </ItemGroup>

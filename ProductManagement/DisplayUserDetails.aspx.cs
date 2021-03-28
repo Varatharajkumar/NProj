@@ -7,10 +7,14 @@ using System.Web.UI.WebControls;
 
 namespace ProductManagement
 {
-    public partial class SideBarDetails : System.Web.UI.UserControl
+    public partial class DisplayUserDetails : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (Session["User"] == null)
+            {
+                Response.Redirect("~/LoginInfo.aspx");
+            }
         }
     }
 }

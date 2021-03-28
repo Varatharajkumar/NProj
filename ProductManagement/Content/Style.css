@@ -1,15 +1,40 @@
 ﻿body {
     font-family: "Lato", sans-serif;
 }
+.clsRight{
+    text-align : right;
+}
+.topbar {
+    top: 0;
+    left: 0;
+    height: 40px;
+    width: 100%;
+    position: fixed;
+    background-color: palegoldenrod;
+}
+.clsLogin {
+    margin-top: 10px;
+}
+#TopBarDetails1_lblUser {
+    margin-left:50px;
+    color:forestgreen;
+    font-weight:bold;
+}
+
+#TopBarDetails1_lnkSignOut {
+    float:right;
+    margin-right:50px;
+}
+
 
 .sidebar {
     height: 100%;
     width: 260px;
     position: fixed;
     z-index: 1;
-    top: 0;
+    top: 40px;
     left: 0;
-    background-color: lightgrey;
+    background-color: gainsboro;
     overflow-x: hidden;
     padding-top: 16px;
 }
@@ -27,12 +52,12 @@
         }
 
 .main {
-    top: 0;
+    top: 40px;
     height: 100%;
     width: 100%;
     position: fixed;
-    margin-left: 260px;
-    background-color: lightyellow;
+    margin-left: 252px;
+    background-color:skyblue;
 }
 
 @media screen and (max-height: 450px) {

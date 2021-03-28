@@ -11,12 +11,18 @@ namespace ProductManagement
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if (IsPostBack)
+            {
+                Session["User"] = txtUsername.Text;
+            }
         }
 
         protected void btnLogin_Click(object sender, EventArgs e)
         {
-            Response.Redirect("~/ProductDetails.aspx");
+            if (Session["User"] != null)
+            {
+                Response.Redirect("~/ProductDetails.aspx");
+            }
         }
     }
 }

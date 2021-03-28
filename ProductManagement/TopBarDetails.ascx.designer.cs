@@ -11,34 +11,25 @@ namespace ProductManagement
 {
 
 
-    public partial class SideBarDetails
+    public partial class TopBarDetails
     {
 
         /// <summary>
-        /// hyperlink1 control.
+        /// lblUser control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink hyperlink1;
+        protected global::System.Web.UI.WebControls.Label lblUser;
 
         /// <summary>
-        /// hyperlink2 control.
+        /// lnkSignOut control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink hyperlink2;
-
-        /// <summary>
-        /// hyperlink3 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink hyperlink3;
+        protected global::System.Web.UI.WebControls.LinkButton lnkSignOut;
     }
 }
