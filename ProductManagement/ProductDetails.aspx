@@ -21,18 +21,22 @@
             <uc1:SideBarDetails runat="server" ID="SideBarDetails1" />
         </div>
         <div class="main">
-            <asp:GridView ID="GridView1" runat="server" BackColor="#DEBA84" BorderColor="#DEBA84" BorderStyle="None" BorderWidth="1px" CellPadding="3" CellSpacing="2">
-                <FooterStyle BackColor="#F7DFB5" ForeColor="#8C4510" />
-                <HeaderStyle BackColor="#A55129" Font-Bold="True" ForeColor="White" />
-                <PagerStyle ForeColor="#8C4510" HorizontalAlign="Center" />
-                <RowStyle BackColor="#FFF7E7" ForeColor="#8C4510" />
-                <SelectedRowStyle BackColor="#738A9C" Font-Bold="True" ForeColor="White" />
-                <SortedAscendingCellStyle BackColor="#FFF1D4" />
-                <SortedAscendingHeaderStyle BackColor="#B95C30" />
-                <SortedDescendingCellStyle BackColor="#F1E5CE" />
-                <SortedDescendingHeaderStyle BackColor="#93451F" />
+            <h3 style="margin:20px;">Display Product</h3>
+            <asp:GridView ID="GridView1" runat="server" BackColor="#CCCCCC" BorderColor="#999999" BorderStyle="Solid" BorderWidth="3px" CellPadding="4" CellSpacing="2" Height="345px" Width="1115px" ForeColor="Black">
+                <FooterStyle BackColor="#CCCCCC" />
+                <HeaderStyle BackColor="Black" Font-Bold="True" ForeColor="White" />
+                <PagerStyle ForeColor="Black" HorizontalAlign="Left" BackColor="#CCCCCC" />
+                <RowStyle BackColor="White" />
+                <SelectedRowStyle BackColor="#000099" Font-Bold="True" ForeColor="White" />
+                <SortedAscendingCellStyle BackColor="#F1F1F1" />
+                <SortedAscendingHeaderStyle BackColor="#808080" />
+                <SortedDescendingCellStyle BackColor="#CAC9C9" />
+                <SortedDescendingHeaderStyle BackColor="#383838" />
             </asp:GridView>
-            <asp:Button ID="btnDownload" runat="server" OnClick="btnDownload_Click" Text="Download Data" />
+            <br />
+            <br />
+<%--   <button class="btn clsButtonStyle"><i class="fa fa-download" runat="server" onserverclick="btnDownload_Click"></i> Download</button>--%>
+            <asp:Button  CssClass="btn clsButtonStyle fa fa-download"  ID="btnDownload" runat="server" Text="Download" OnClick="btnDownload_Click"  Height="53px" Width="150px" />
         </div>
 
     </form>

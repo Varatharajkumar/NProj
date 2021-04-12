@@ -15,6 +15,7 @@ namespace ProductManagement
             {
                 Session["User"] = txtUsername.Text;
             }
+ 
         }
 
         protected void btnLogin_Click(object sender, EventArgs e)
@@ -23,6 +24,13 @@ namespace ProductManagement
             {
                 Response.Redirect("~/ProductDetails.aspx");
             }
+
+        }
+
+        protected void btnRegister_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("~/RegisterationDetails.aspx");
+            
         }
     }
 }

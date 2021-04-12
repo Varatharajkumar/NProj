@@ -7,34 +7,37 @@
 .topbar {
     top: 0;
     left: 0;
-    height: 40px;
+    height: 80px;
     width: 100%;
     position: fixed;
-    background-color: palegoldenrod;
+    background-color:cadetblue;
 }
 .clsLogin {
     margin-top: 10px;
 }
 #TopBarDetails1_lblUser {
-    margin-left:50px;
-    color:forestgreen;
-    font-weight:bold;
+    margin-left: 50px;
+    color: cornflowerblue;
+    font-weight: bold;
+    font-size: large;
+    background-color: white;
 }
 
 #TopBarDetails1_lnkSignOut {
-    float:right;
-    margin-right:50px;
+    float: right;
+    margin-right: 50px;
+    background-color: white;
 }
 
 
 .sidebar {
     height: 100%;
-    width: 260px;
+    width: 160px;
     position: fixed;
     z-index: 1;
-    top: 40px;
+    top: 80px;
     left: 0;
-    background-color: gainsboro;
+    background-color:gainsboro;
     overflow-x: hidden;
     padding-top: 16px;
 }
@@ -52,12 +55,12 @@
         }
 
 .main {
-    top: 40px;
+    top: 80px;
     height: 100%;
     width: 100%;
     position: fixed;
-    margin-left: 252px;
-    background-color:skyblue;
+    margin-left: 152px;
+    background-color:darkseagreen;
 }
 
 @media screen and (max-height: 450px) {
@@ -68,4 +71,48 @@
         .sidebar a {
             font-size: 18px;
         }
+}
+
+#h2elmt {
+    text-align: center;
+}
+
+
+/* Style buttons */
+.btn {
+    background-color: DodgerBlue;
+    border: none;
+    color: white;
+    padding: 12px 30px;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+    /* Darker background on mouse-over */
+    .btn:hover {
+        background-color: RoyalBlue;
+    }
+
+.clsButtonStyle{
+  margin-left: 950px;
+}
+
+.clsButtonStyle1 {
+    margin-left: 850px;
+}
+
+.clsTopMenuElmt{
+    margin-right: 25px;
+}
+
+.clsTopMenuElmt2{
+    background-color : red;
+    color :white;
+    font-weight:bold;
+}
+
+.clsTopMenuElmt3 {
+    background-color: green;
+    color: white;
+    font-weight: bold;
 }

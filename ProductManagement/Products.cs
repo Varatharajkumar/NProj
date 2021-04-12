@@ -7,11 +7,11 @@ namespace ProductManagement
 {
     public class Products
     {
-        public long Id { get; set; }
-        public string Name { get; set; }
-        public string Category { get; set; }
-        public string Quality { get; set; }
-        public long Cost { get; set; }
-        public string NeedleInfo { get; set; }
+        public string PartyName { get; set; }
+        public string MaterialType { get; set; }
+        public string Color { get; set; }
+        public long ProductCost { get; set; }
+        public long Quantity { get; set; }
+        public string CreatedDate { get; set; }
     }
 }

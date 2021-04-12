@@ -21,23 +21,22 @@ namespace ProductManagement
         {
             int output = 0;
             Products product = new Products();
-            product.Name = txtProductName.Text;
-            product.Category = txtProductCategory.Text;
-            product.Quality = txtProductQuality.Text;
-            product.Cost = Convert.ToInt64(txtProductCost.Text);
-            product.NeedleInfo = txtNeedleInfo.Text;
+            product.PartyName = txtPartyName.Text;
+            product.MaterialType = txtMaterialType.Text;
+            product.Color = txtColor.Text;
+            product.ProductCost = Convert.ToInt64(txtProductCost.Text);
+            product.Quantity = Convert.ToInt64(txtQuantity.Text);
 
             DDL dBCall = new DDL();
             output = dBCall.AddStudent(product);
             lblOutput.Visible = true;
             if (output > 0) {
-                lblOutput.Text = "Record saved successfully";
-                lblOutput.BackColor = System.Drawing.Color.Green;
-                    }
+                ClientScript.RegisterStartupScript(GetType(), "Javascript", "javascript: fnShowMessage('Record saved successfully'); ", true);
+                Response.Redirect("~/ProductDetails.aspx");
+            }
             else
             {
-                lblOutput.Text = "Record already exists with the Name - " + product.Name;
-                lblOutput.BackColor = System.Drawing.Color.Red;
+                ClientScript.RegisterStartupScript(GetType(), "Javascript", "javascript: fnShowMessage('Record already exists with the PartyName'); ", true);
             }
 
             //AddStudent

@@ -35,12 +35,12 @@ namespace ProductManagement
                 while (dr.Read())
                 {
                     product = new Products();
-                    product.Id = Convert.ToInt32(dr["Id"]);
-                    product.Name = dr["Name"].ToString();
-                    product.Category = dr["Category"].ToString();
-                    product.Quality = dr["Quality"].ToString();
-                    product.Cost = Convert.ToInt32(dr["Cost"]);
-                    product.NeedleInfo = dr["NeedleInfo"].ToString();
+                    product.PartyName = dr["PartyName"].ToString();
+                    product.MaterialType = dr["MaterialType"].ToString();
+                    product.Color = dr["Color"].ToString();
+                    product.ProductCost = Convert.ToInt64(dr["ProductCost"]);
+                    product.Quantity = Convert.ToInt64(dr["Quantity"]);
+                    product.CreatedDate = dr["CreatedDate"].ToString();
                     lstProduct.Add(product);
                 }
             }
@@ -56,11 +56,11 @@ namespace ProductManagement
             {
                 cmd.CommandText = "[dbo].[Product.AddProduct]";
                 cmd.Parameters.Clear();
-                cmd.Parameters.AddWithValue("@Name", product.Name);
-                cmd.Parameters.AddWithValue("@Category", product.Category);
-                cmd.Parameters.AddWithValue("@Quality", product.Quality);
-                cmd.Parameters.AddWithValue("@Cost", product.Cost);
-                cmd.Parameters.AddWithValue("@NeedleInfo", product.NeedleInfo);
+                cmd.Parameters.AddWithValue("@PartyName", product.PartyName);
+                cmd.Parameters.AddWithValue("@MaterialType", product.MaterialType);
+                cmd.Parameters.AddWithValue("@Color", product.Color);
+                cmd.Parameters.AddWithValue("@ProductCost", product.ProductCost);
+                cmd.Parameters.AddWithValue("@Quantity", product.Quantity);
                 con.Open();
                 Count = cmd.ExecuteNonQuery();
             }
@@ -68,5 +68,52 @@ namespace ProductManagement
             finally { con.Close(); }
             return Count;
         }
+
+
+        public int RegisterUser(string name, int age, long mobileNo, string email)
+        {
+            int Count = 0;
+            try
+            {
+                cmd.CommandText = "[dbo].[Product.RegisterUser]";
+                cmd.Parameters.Clear();
+                cmd.Parameters.AddWithValue("@Name", name);
+                cmd.Parameters.AddWithValue("@Age", age);
+                cmd.Parameters.AddWithValue("@MobileNo", mobileNo);
+                cmd.Parameters.AddWithValue("@Email", email);
+                con.Open();
+                Count = cmd.ExecuteNonQuery();
+            }
+            catch (Exception ex) { throw ex; }
+            finally { con.Close(); }
+            return Count;
+        }
+
+        public List<Users> GetUsers()
+        {
+            Users user = null;
+            List<Users> lstUsers = new List<Users>();
+            try
+            {
+                cmd.CommandText = "[dbo].[Product.GetUserDetails]";
+                cmd.Parameters.Clear();
+                con.Open();
+                SqlDataReader dr = cmd.ExecuteReader();
+                while (dr.Read())
+                {
+                    user = new Users();
+                    user.Id = Convert.ToInt32(dr["Id"]);
+                    user.Name = dr["Name"].ToString();
+                    user.Age = Convert.ToInt32(dr["Age"].ToString());
+                    user.MobileNo = Convert.ToInt64(dr["MobileNo"].ToString());
+                    user.Email = dr["Email"].ToString();
+                    lstUsers.Add(user);
+                }
+            }
+            catch (Exception ex) { throw ex; }
+            finally { con.Close(); }
+            return lstUsers;
+        }
+
     }
 }

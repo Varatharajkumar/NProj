@@ -10,7 +10,7 @@
     <script src="Scripts/MyScripts/ProductDetails.js"></script>
     <script>
         $(function () {
-            
+            //GetData();     
         })
     </script>
     <title></title>
@@ -18,10 +18,10 @@
 <body>
     <form id="form1" runat="server">
           
-        <div class="container" style="max-width: 500px;">
+        <div class="container" style="max-width: 550px;">
          
 
-            <h2 class="form-signin-heading" style="margin-top: 15%; ">Login to Product Management</h2>
+            <h2 class="form-signin-heading" style="margin-top: 15%; ">Business Solutions - Yarn Industry</h2>
             <label for="txtUsername" style="font-weight: bold; margin-top: 20px;">
                 User Name</label>
             <asp:TextBox ID="txtUsername" runat="server" CssClass="form-control" placeholder="Enter User Name"
@@ -33,13 +33,15 @@
                 placeholder="Enter Password" required />
 
             <asp:Button ID="btnLogin" Text="Login" runat="server" Class="btn btn-primary" Style="margin-top: 20px;" OnClick="btnLogin_Click" OnClientClick="return ValidateUser();" />
-            <br />
+            <asp:Button ID="btnRegister" Text="Register" runat="server" Class="btn btn-primary" Style="margin-top: 20px;" OnClick="btnRegister_Click" />
+          
+
             <br />
             <div id="dvMessage" runat="server" visible="false" class="alert alert-danger">
                 <strong>Error!</strong>
                 <asp:Label ID="lblMessage" runat="server" />
             </div>
-             <asp:Image ID="Image1" runat="server" ImageUrl="~/management.jpg" style="width:450px; height:300px;"/>
+             <asp:Image ID="Image1" runat="server" ImageUrl="~/management.jpg" style="width:520px; height:300px;"/>
         </div>
     </form>
 </body>

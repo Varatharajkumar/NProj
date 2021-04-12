@@ -42,31 +42,31 @@ namespace ProductManagement
         protected global::ProductManagement.SideBarDetails SideBarDetails1;
 
         /// <summary>
-        /// txtProductName control.
+        /// txtPartyName control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtProductName;
+        protected global::System.Web.UI.WebControls.TextBox txtPartyName;
 
         /// <summary>
-        /// txtProductCategory control.
+        /// txtMaterialType control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtProductCategory;
+        protected global::System.Web.UI.WebControls.TextBox txtMaterialType;
 
         /// <summary>
-        /// txtProductQuality control.
+        /// txtColor control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtProductQuality;
+        protected global::System.Web.UI.WebControls.TextBox txtColor;
 
         /// <summary>
         /// txtProductCost control.
@@ -78,13 +78,13 @@ namespace ProductManagement
         protected global::System.Web.UI.WebControls.TextBox txtProductCost;
 
         /// <summary>
-        /// txtNeedleInfo control.
+        /// txtQuantity control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtNeedleInfo;
+        protected global::System.Web.UI.WebControls.TextBox txtQuantity;
 
         /// <summary>
         /// Button1 control.
